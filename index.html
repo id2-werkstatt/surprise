@@ -1,0 +1,44 @@
+<!doctype HTML>
+<html>
+<link rel="icon" href="data:;base64,iVBORw0KGgo=">
+<script src="aframe.min.js"></script>
+<script src="aframe-ar.js"></script>
+<script src="aframe-text-geometry-component.min.js"></script>
+
+<body style="margin: 0px; overflow: hidden;">
+
+<a-scene embedded vr-mode-ui="enabled: false;" arjs="debugUIEnabled: false;">
+
+	<a-assets>
+		<a-asset-item id="exoFont" src="exoBlack.typeface.json"></a-asset-item>
+	</a-assets>
+
+    <a-marker type="pattern" url="pattern1.patt">
+		<a-entity text-geometry="value: Alles Gute; font: #exoFont; size: 0.3;"
+			material="color: #cb002d" 
+			rotation="-50 0 0"
+			position="-1 0.5 -0.3">
+		</a-entity>
+        <a-entity text-geometry="value: zum Geburtstag; font: #exoFont; size: 0.3;"
+            material="color: black" 
+            rotation="-50 0 0"
+            position="-1.5 0.5 0.3 ">
+        </a-entity>
+	</a-marker>	
+
+	<a-marker type="pattern" url="pattern2.patt">
+		<a-entity text-geometry="value: von der; font: #exoFont; size: 0.1;"
+			material="color: #white" 
+			rotation="-50 0 0"
+			position="-0.25 0.5 -0.2">
+		</a-entity>
+        <a-image src="logo.png" position="0 0.5 0.1" rotation="-50 0 0" width="1.5" height="0.3"></a-image>
+    </a-marker>
+
+
+
+    <a-entity camera></a-entity>
+    
+</a-scene>
+</body>
+</html>
